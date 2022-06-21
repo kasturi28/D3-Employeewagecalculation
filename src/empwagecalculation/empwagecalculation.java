@@ -5,17 +5,22 @@ public class empwagecalculation {
 	public static final int wagePerHour = 20;
 	public static final int empFullTime = 1;
 	public static final int empPartTime = 2;
-	public static final int workingDays = 20;
-
+	public static final int totalWorkingDays = 20;
+	public static final int totalWorkingHours = 100;
+	
 	public static void main(String[] args) {
 
 		int employeeWage = 0;
 		int workingHours = 0;
+		int workingDays = 0;
 		int totalEmpWage = 0;
 
 		int empCheck = (int) Math.floor(Math.random() * 10) % 3;
 
-		for (int day = 0; day <= workingDays; day++) {
+		while (workingHours <= totalWorkingHours && workingDays <= totalWorkingDays ) {
+			
+			workingDays++;
+			
 
 			switch (empCheck) {
 
